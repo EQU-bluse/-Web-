@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 166 131" version="1.1">
+  <defs>
+    <path id="pathSvgDefs0" d="M0 0L166 0L166 131L0 131Z" />
+    <clipPath id="clipSvgDefs1">
+      <use xlink:href="#pathSvgDefs0" />
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clipSvgDefs1)">
+    <path fill="#41D1FF" d="M79.3978 0.301372L103.008 45.6916L48.2485 45.7257L79.3978 0.301372Z" />
+    <path fill="#BD34FE" d="M79.4032 0.301372L55.7926 45.6916L110.552 45.7257L79.4032 0.301372Z" />
+    <path fill="#41D1FF" d="M158.791 129.984L132.193 83.0595L87.1782 83.1284L158.791 129.984Z" />
+    <path fill="#BD34FE" d="M158.798 129.984L185.396 83.0595L130.381 83.1284L158.798 129.984Z" />
+    <path fill="#41D1FF" d="M0.00698654 129.984L26.6047 83.0595L81.6201 83.1284L0.00698654 129.984Z" />
+    <path fill="#BD34FE" d="M-0.000408785 129.984L-26.5982 83.0595L28.4172 83.1284L-0.000408785 129.984Z" />
+    <linearGradient id="paintSvgLinearGradient2" x1="82.994" y1="5.03264" x2="92.1705" y2="89.085" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFEA83" />
+      <stop offset="0.0833333" stop-color="#FFDD35" />
+      <stop offset="1" stop-color="#FFA800" />
+    </linearGradient>
+    <path fill="url(#paintSvgLinearGradient2)" d="M79.4005 1.32761L94.5579 50.0231L64.2436 50.0445L79.4005 1.32761Z" />
+    <linearGradient id="paintSvgLinearGradient3" x1="82.9967" y1="5.03264" x2="82.9967" y2="50.1181" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFEA83" />
+      <stop offset="0.0833333" stop-color="#FFDD35" />
+      <stop offset="1" stop-color="#FFA800" />
+    </linearGradient>
+    <path fill="url(#paintSvgLinearGradient3)" d="M79.4005 1.32761L64.2436 50.0445L79.4005 50.0338L79.4005 1.32761Z" />
+    <linearGradient id="paintSvgLinearGradient4" x1="142.099" y1="135.013" x2="107.401" y2="51.3063" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFEA83" />
+      <stop offset="0.0833333" stop-color="#FFDD35" />
+      <stop offset="1" stop-color="#FFA800" />
+    </linearGradient>
+    <path fill="url(#paintSvgLinearGradient4)" d="M158.794 129.669L119.641 59.0664L137.94 59.1022L158.794 129.669Z" />
+    <linearGradient id="paintSvgLinearGradient5" x1="16.7022" y1="135.013" x2="51.4005" y2="51.3063" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFEA83" />
+      <stop offset="0.0833333" stop-color="#FFDD35" />
+      <stop offset="1" stop-color="#FFA800" />
+    </linearGradient>
+    <path fill="url(#paintSvgLinearGradient5)" d="M0.00698654 129.669L39.1596 59.0664L20.861 59.1022L0.00698654 129.669Z" />
+  </g>
+</svg>
