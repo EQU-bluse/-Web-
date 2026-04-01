@@ -248,6 +248,13 @@ body {
   overflow-y: auto;
   flex: 1;
   min-height: 100px;
+  transition: background-color 0.2s;
+}
+
+.column-content.drag-over {
+  background-color: #e6f7ff;
+  border: 2px dashed #1890ff;
+  border-radius: 8px;
 }
 
 .empty-state {
@@ -263,6 +270,11 @@ body {
   margin-bottom: 12px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
   transition: all 0.2s;
+  cursor: grab;
+}
+
+.task-card:active {
+  cursor: grabbing;
 }
 
 .task-card:hover {

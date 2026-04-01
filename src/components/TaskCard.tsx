@@ -19,23 +19,29 @@ const priorityColors: Record<string, string> = {
 };
 
 export const TaskCard = ({ task, onMove, onDelete }: TaskCardProps) => {
-  const getAvailableMoves = (currentStatus: TaskStatus): TaskStatus[] => {
-    switch (currentStatus) {
-      case 'todo':
-        return ['inprogress'];
-      case 'inprogress':
-        return ['todo', 'done'];
-      case 'done':
-        return ['inprogress'];
-      default:
-        return [];
-    }
+  const getAllStatuses = (currentStatus: TaskStatus): TaskStatus[] => {
+    const allStatuses: TaskStatus[] = ['todo', 'inprogress', 'done'];
+    return allStatuses.filter(status => status !== currentStatus);
   };
 
-  const availableMoves = getAvailableMoves(task.status);
+  const availableMoves = getAllStatuses(task.status);
+
+  const handleDragStart = (e: React.DragEvent) => {
+    e.dataTransfer.setData('taskId', task.id);
+    e.currentTarget.style.opacity = '0.5';
+  };
+
+  const handleDragEnd = (e: React.DragEvent) => {
+    e.currentTarget.style.opacity = '1';
+  };
 
   return (
-    <div className="task-card">
+    <div
+      className="task-card"
+      draggable
+      onDragStart={handleDragStart}
+      onDragEnd={handleDragEnd}
+    >
       <div className="task-card-header">
         <h4 className="task-title">{task.title}</h4>
         <button className="delete-btn" onClick={() => onDelete(task.id)}>

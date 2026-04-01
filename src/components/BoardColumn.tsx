@@ -13,15 +13,38 @@ interface BoardColumnProps {
 export const BoardColumn = ({ title, status, tasks, onMove, onDelete, color }: BoardColumnProps) => {
   const columnTasks = tasks.filter(task => task.status === status);
 
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.currentTarget.classList.add('drag-over');
+  };
+
+  const handleDragLeave = (e: React.DragEvent) => {
+    e.currentTarget.classList.remove('drag-over');
+  };
+
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.currentTarget.classList.remove('drag-over');
+    const taskId = e.dataTransfer.getData('taskId');
+    if (taskId) {
+      onMove(taskId, status);
+    }
+  };
+
   return (
     <div className="board-column">
       <div className="column-header" style={{ borderLeftColor: color }}>
         <h3>{title}</h3>
         <span className="task-count">{columnTasks.length}</span>
       </div>
-      <div className="column-content">
+      <div
+        className="column-content"
+        onDragOver={handleDragOver}
+        onDragLeave={handleDragLeave}
+        onDrop={handleDrop}
+      >
         {columnTasks.length === 0 ? (
-          <div className="empty-state">暂无任务</div>
+          <div className="empty-state">拖入任务</div>
         ) : (
           columnTasks.map((task) => (
             <TaskCard
